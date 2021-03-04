@@ -1,12 +1,14 @@
 import random 
-from person import person
+from person import Person
 
 class House():
   def __init__(self, house, cost):
-    self.house = list['shack', 'ranch', 'duplex', 'mansion', 'beach house']
-    self.cost = random.randint(100000, 1000000)
+    self.house = list
+    house = ['shack', 'ranch', 'duplex', 'mansion', 'beach house']
+    self.cost = cost
+    cost = random.randint(100000, 1000000)
 
-  def choose_house(home, cost):
+  def choose_house(self, house, cost):
     house_q = input('Would you like to purchase a house? y/n')
 
     if house_q == 'y':

@@ -1,13 +1,13 @@
 import random
 from person import Person
 
-class Job(self, job, money):
+class Job(Person):
   def __init__ (self, job, salary):
     self.job = job
     self.salary = salary
   
   i1 = {'job' : 'plumber', 'salary' : 56000}
-  i1 = {'job' : 'bartender', 'salary' : 26000}
+  i2 = {'job' : 'bartender', 'salary' : 26000}
   i3 = {'job' : 'pilot', 'salary' : 175000}
   i4 = {'job' : 'store manager', 'salary' : 100000}
 
@@ -19,7 +19,7 @@ class Job(self, job, money):
   diploma = [i1, i2, i3, i4]
   degree = [e1, e2, e3, e4]
 
-  def select_job (job, diploma, degree):
+  def select_job (self, job, diploma, degree, money):
     job_q = input("Would you like to go to college? y/n")
 
     if job_q == 'y':

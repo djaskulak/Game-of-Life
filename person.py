@@ -12,7 +12,7 @@ class Person:
     name = input("Welcome! What is your name? ")
     return name
 
-  def add_kid (self, kids=0, money):
+  def add_kid (self, money, kids=0):
     self.kids = kids
     kids = random.randint(0, 4)
     self.money = money
