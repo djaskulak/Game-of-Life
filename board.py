@@ -2,8 +2,11 @@ import random
 import job from Job
 import person from Person
 
-function Board(): 
+class Board(): 
   def __init__(self, actions):
     self.actions = actions
   
-  actions = [select_job]
+  actions = [select_job, select_house]
+
+  def select_action(actions):
+    random.choice(actions)
