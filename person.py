@@ -1,7 +1,7 @@
 import random
-import job from Job
-import house from house
-import board from Board
+from job import Job
+from house import House
+from board import Board
 
 class Person:
   def __init__ (self, name, money=10000):
@@ -12,9 +12,11 @@ class Person:
     name = input("Welcome! What is your name? ")
     return name
 
-  def add_kid (self, kids=0):
+  def add_kid (self, kids=0, money):
+    self.kids = kids
     kids = random.randint(0, 4)
-    money = money - (kids * 1000)
+    self.money = money
+    money -= (kids * 1000)
     print ("You now have {kids} kids!")
     return money, kids
 
@@ -25,13 +27,15 @@ class Person:
     print ("You have {kids} kids")
     print ("You live in a {home}")
 
-person.get_name(name)
 
-play = True
+if __name__ == "__main__":
+  name = get_name(name)
 
-while play is True:
-  like = input("Would you like to play a turn? y/n")
-  if like == 'y':
-    board.select_action
-  else:
-    print("It was nice playing with you!")
+  play = True
+
+  while play is True:
+    like = input("Would you like to play a turn? y/n")
+    if like == 'y':
+      board.select_action
+    else:
+      print("It was nice playing with you!")

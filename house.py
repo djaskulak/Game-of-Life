@@ -1,5 +1,5 @@
 import random 
-import person from person
+from person import person
 
 class House():
   def __init__(self, house, cost):
