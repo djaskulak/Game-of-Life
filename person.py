@@ -1,9 +1,11 @@
 import random
+import job from Job
 
 class Person:
-  def __init__ (self, name, starting_money=10000):
+  def __init__ (self, name, money=10000):
     self.name = name
+    self.money = money
 
-    self.starting_money = starting_money
-    self.current_money = current_money
-    
+  def add_kid (self, kids):
+    kids = random.randint(0, 4)
+    return ("You now have {kids} kids")
