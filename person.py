@@ -1,41 +1,26 @@
 import random
-from job import Job
-from house import House
-from board import Board
 
 class Person:
-  def __init__ (self, name, money=10000):
+  def __init__ (self, name='', money=10000):
     self.name = name
     self.money = money
+    self.home = ''
+    self.job = ""
 
-  def get_name (self, name):
-    name = input("Welcome! What is your name? ")
-    return name
+  def get_name (self):
+    self.name = input("Welcome! What is your name? ")
+    return self.name
 
-  def add_kid (self, money, kids=0):
-    self.kids = kids
-    kids = random.randint(0, 4)
+  def add_kid (self, money):
+    self.kids = random.randint(0, 4)
     self.money = money
-    money -= (kids * 1000)
-    print ("You now have {kids} kids!")
-    return money, kids
+    money -= (self.kids * 1000)
+    print (f"You now have {self.kids} kids!")
+    return money, self.kids
 
-  def print_attributes (self, name, money, job, salary, kids, home):
-    print ("Hello! Your name is {name}")
-    print ("Your balance is {money}")
-    print ("You are a {job} and make ${salary}")
-    print ("You have {kids} kids")
-    print ("You live in a {home}")
-
-
-if __name__ == "__main__":
-  name = get_name(name)
-
-  play = True
-
-  while play is True:
-    like = input("Would you like to play a turn? y/n")
-    if like == 'y':
-      board.select_action
-    else:
-      print("It was nice playing with you!")
+  def print_attributes (self):
+    print (f"Hello! Your name is {self.name}")
+    print (f"Your balance is {self.money}")
+    # print (f"You are a {job} and make ${salary}")
+    print (f"You have {self.kids} kids")
+    print (f"You live in a {self.home}")
